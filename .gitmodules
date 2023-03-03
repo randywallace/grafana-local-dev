@@ -1,0 +1,4 @@
+[submodule "grafana"]
+	path = grafana
+	url = https://github.com/grafana/grafana.git
+  # Currently checked out to v9.4.3
