@@ -2,3 +2,9 @@
 	path = grafana
 	url = https://github.com/grafana/grafana.git
   # Currently checked out to v9.4.3
+[submodule "grafana-azure-sdk-go"]
+	path = grafana-azure-sdk-go
+	url = https://github.com/grafana/grafana-azure-sdk-go.git
+[submodule "grafana-infinity-datasource"]
+	path = grafana-infinity-datasource
+	url = https://github.com/yesoreyeram/grafana-infinity-datasource.git
