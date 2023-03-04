@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./grafana/bin/grafana-server --config conf/config.ini --homepath grafana
