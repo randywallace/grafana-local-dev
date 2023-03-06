@@ -15,4 +15,19 @@ datasources:
     jsonData:
       azureAuthType: msi
     version: 1
-# subscriptionId: <subscription-id> # Optional, default subscription
+  - id: 6
+    uid: "JaJFZ8xVz"
+    orgId: 1
+    name: "Infinity"
+    type: "yesoreyeram-infinity-datasource"
+    url: ""
+    basicAuth: false
+    basicAuthUser: ""
+    isDefault: false
+    jsonData:
+      allowedHosts:
+        - "https://management.azure.com/"
+      auth_method: "azure"
+      global_queries: []
+      oauthPassThru: false
+    readOnly: false
