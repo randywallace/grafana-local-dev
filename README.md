@@ -1,28 +1,29 @@
 # Steps to run Grafana Local
 
-1.Have Azure CLI available on PATH and logged in
-  a. Note: Running this inside Docker is a bit tricky
-2. Run Submodules
-  a. `git submodule update --recursive`
-3. Add the following to a new line in grafana/go.mod:
-  a. `replace github.com/grafana/grafana-azure-sdk-go => ../grafana-azure-sdk-go`
-  b. This will allow building Grafana with a local checkout
-4. Build Grafana
-  a. cd to grafana submodule
-  b. `yarn install --immutable`
-  c. `go mod tidy` (may not build in next step, if so, probably just run this again)
-  d. `make run`
-  e. Assuming all successful, will start running Grafana from port 3000, Ctrl+c out.  Otherwise review errors
-5. Build Infinity Plugin
-  a. update .tool-versions and swap to Node 16
-  b. `yarn install --immutable`
-  c. `yarn dev`
-  d. `go mod tidy`
-  e. `mage -v`
-6. Symlink the Plugin
-  a. from root of repo
-  b. `cd plugins`
-  c. `ln -s ../grafana-infinity-datasource/dist ./grafana-infinity-datasource`
-7. Start 'er up
-  a. run start_server script from repo root (`./start_server`)
-  b. for local dev, this is fine :)
+
+1. Have Azure CLI available on PATH and logged in
+  - Note: Running this inside Docker is a bit tricky
+1. Run Submodules
+  - `git submodule update --recursive`
+1. Add the following to a new line in grafana/go.mod:
+  - `replace github.com/grafana/grafana-azure-sdk-go => ../grafana-azure-sdk-go`
+  - This will allow building Grafana with a local checkout
+1. Build Grafana
+  - cd to grafana submodule
+  - `yarn install --immutable`
+  - `go mod tidy` (may not build in next step, if so, probably just run this again)
+  - `make run`
+  - Assuming all successful, will start running Grafana from port 3000, Ctrl+c out.  Otherwise review errors
+1. Build Infinity Plugin
+  - update .tool-versions and swap to Node 16
+  - `yarn install --immutable`
+  - `yarn dev`
+  - `go mod tidy`
+  - `mage -v`
+1. Symlink the Plugin
+  - from root of repo
+  - `cd plugins`
+  - `ln -s ../grafana-infinity-datasource/dist ./grafana-infinity-datasource`
+1. Start 'er up
+  - run start_server script from repo root (`./start_server`)
+  - for local dev, this is fine :)
