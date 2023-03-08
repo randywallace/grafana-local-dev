@@ -1,10 +1,9 @@
 [submodule "grafana"]
 	path = grafana
 	url = https://github.com/grafana/grafana.git
-  # Currently checked out to v9.4.3
 [submodule "grafana-azure-sdk-go"]
 	path = grafana-azure-sdk-go
-  url = git@github.com:randywallace/grafana-azure-sdk-go.git
+	url = git@github.com:randywallace/grafana-azure-sdk-go.git
 [submodule "grafana-infinity-datasource"]
 	path = grafana-infinity-datasource
 	url = git@github.com:randywallace/grafana-infinity-datasource.git
